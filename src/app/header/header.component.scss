@@ -1,0 +1,24 @@
+div {
+    margin-bottom: 1.5em;
+    border-bottom: 2px solid black;
+
+    h1 {
+        font-weight: 100;
+        font-size: 3em;
+        
+        span {
+            margin: 0 0.1em;
+    
+            &#last-name {
+                font-weight: 400;
+            }
+        }
+    }
+    
+    mat-list {
+        mat-divider {
+            height: 20px;
+        }
+    }
+}
+
