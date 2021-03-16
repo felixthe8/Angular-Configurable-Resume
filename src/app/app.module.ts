@@ -18,7 +18,6 @@ import { MatListModule } from '@angular/material/list';
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatIconModule,
     MatDividerModule,
     MatListModule
   ],
