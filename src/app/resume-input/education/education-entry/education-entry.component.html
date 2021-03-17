@@ -1,0 +1,37 @@
+<div fxLayout="row wrap">
+    <mat-form-field appearance="outline" fxFlex="60">
+        <mat-icon matPrefix>school</mat-icon>
+        <mat-label>Institution</mat-label>
+        <input matInput placeholder="Enter Institution Name" required>
+    </mat-form-field>
+
+    <div fxFlex="60" fxLayoutAlign="space-between center">
+        <mat-form-field appearance="outline" fxFlex="45">
+            <mat-label>Field of Study</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let field of (fieldsOfStudy |async )?.majors" [value]="field.name">{{ field.name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div fxFlex="60" fxLayoutAlign="space-between center" >
+        <mat-form-field appearance="outline" fxFlex="45">
+            <mat-label>Year Started</mat-label>
+            <mat-select [(ngModel)]="yearStart">
+                <mat-option *ngFor="let year of yearRange" [value]="year">{{ year }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="45">
+            <mat-label>Year Completed</mat-label>
+            <mat-select [(ngModel)]="yearComplete"> 
+                <mat-option value="">Present</mat-option>
+                <mat-option *ngFor="let year of yearRange" [value]="year">{{ year }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+        <!-- <ng-container *ngFor="let f of (fieldsOfStudy |async )?.majors">
+            <p>{{ f.name }}</p>
+        </ng-container> -->
+
+</div>

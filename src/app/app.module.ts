@@ -11,10 +11,14 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule}  from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatSelectModule } from '@angular/material/select';
 
 import { ResumeInputComponent } from './resume-input/resume-input.component';
 import { PersonalDetailsComponent } from './resume-input/personal-details/personal-details.component';
+import { EducationComponent } from './resume-input/education/education.component';
+import { EducationEntryComponent } from './resume-input/education/education-entry/education-entry.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '',  component: ResumeInputComponent }
@@ -25,11 +29,14 @@ const routes: Routes = [
     AppComponent,
     HeaderComponent,
     ResumeInputComponent,
-    PersonalDetailsComponent
+    PersonalDetailsComponent,
+    EducationComponent,
+    EducationEntryComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     FlexLayoutModule,
     MatDividerModule,
     MatListModule,
@@ -37,7 +44,9 @@ const routes: Routes = [
     MatTabsModule,
     MatCardModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
