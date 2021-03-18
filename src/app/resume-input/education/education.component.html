@@ -1,10 +1,9 @@
 <mat-card>
     <mat-card-content>
-        <app-education-entry></app-education-entry>
+        <app-education-entry *ngFor="let entry of educationEntries" [entry]="entry"></app-education-entry>
 
         <mat-card-actions>
-            <app-icon-button id="add-edu-button" [config]="addButton"></app-icon-button>
+            <app-icon-button id="add-edu-button" [config]="addButton" (onClick)="addEducationEntry()"></app-icon-button>
         </mat-card-actions>
     </mat-card-content>
-
 </mat-card>

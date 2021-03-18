@@ -14,8 +14,4 @@ export class IconButtonComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  clickEmit($event): void {
-    this.onClick.emit($event);
-  }
-
 }

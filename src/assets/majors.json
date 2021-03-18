@@ -1,0 +1,145 @@
+{
+    "name": "majors.json",
+    "description": "This file contains a list of all majors and minors offered at Austin College.",
+    "version": 4,
+    "majors": [
+        {
+            "name": "American Studies"
+        },
+        {
+            "name": "Anthropology"
+        },
+        {
+            "name": "Art"
+        },
+        {
+            "name": "Art History"
+        },
+        {
+            "name": "Asian Studies"
+        },
+        {
+            "name": "Biology"
+        },
+        {
+            "name": "Biochemistry"
+        },
+        {
+            "name": "Business Administration"
+        },
+        {
+            "name": "Chemistry"
+        },
+        {
+            "name": "Classical Civilization"
+        },
+        {
+            "name": "Classics"
+        },
+        {
+            "name": "Cognitive Science"
+        },
+        {
+            "name": "Communication"
+        },
+        {
+            "name": "Community Service and Policy"
+        },
+        {
+            "name": "Computer Science"
+        },
+        {
+            "name": "English"
+        },
+        {
+            "name": "Environmental Studies"
+        },
+        {
+            "name": "Exercise and Sport Science"
+        },
+        {
+            "name": "Economics"
+        },
+        {
+            "name": "International Economics and Finance"
+        },
+        {
+            "name": "Film Studies"
+        },
+        {
+            "name": "French"
+        },
+        {
+            "name": "Gender Studies"
+        },
+        {
+            "name": "German"
+        },
+        {
+            "name": "Global Science, Technology, and Society"
+        },
+        {
+            "name": "History"
+        },
+        {
+            "name": "Latin"
+        },
+        {
+            "name": "Latin American and Iberian Studies"
+        },
+        {
+            "name": "Leadership Studies"
+        },
+        {
+            "name": "Mathematics"
+        },
+        {
+            "name": "Media Studies"
+        },
+        {
+            "name": "Music"
+        },
+        {
+            "name": "Philosophy"
+        },
+        {
+            "name": "Religious Studies and Philosophy"
+        },
+        {
+            "name": "Ethics"
+        },
+        {
+            "name": "Political Science"
+        },
+        {
+            "name": "International Relations"
+        },
+        {
+            "name": "Physics"
+        },
+        {
+            "name": "Psychology"
+        },
+        {
+            "name": "Educational Psychology"
+        },
+        {
+            "name": "Religious Studies"
+        },
+        {
+            "name": "Sociology"
+        },
+        {
+            "name": "Southwestern and Mexican Studies"
+        },
+        {
+            "name": "Spanish"
+        },
+        {
+            "name": "Theatre"
+        },
+        {
+            "name": "Western Intellectual Tradition"
+        }
+    ]
+}

@@ -2,22 +2,22 @@
     <mat-form-field appearance="outline" fxFlex="100">
         <mat-icon matPrefix>school</mat-icon>
         <mat-label>Institution</mat-label>
-        <input matInput placeholder="Enter Institution Name" required>
+        <input matInput placeholder="Enter Institution Name" required [(ngModel)]="entry.institution">
     </mat-form-field>
 
     <div fxFlex="100" fxLayoutAlign="space-between center">
         <mat-form-field appearance="outline" fxFlex="45">
             <mat-icon matPrefix>book</mat-icon>
             <mat-label>Degree Type</mat-label>
-            <mat-select>
-                <mat-option *ngFor="let degree of degreeTypes">{{ degree }}</mat-option>
+            <mat-select [(ngModel)]="entry.degreeType">
+                <mat-option *ngFor="let degree of degreeTypes" [value]="degree">{{ degree }}</mat-option>
             </mat-select>
         </mat-form-field>
 
         <mat-form-field appearance="outline" fxFlex="45">
             <mat-icon matPrefix>topic</mat-icon>
             <mat-label>Field of Study</mat-label>
-            <mat-select>
+            <mat-select [(ngModel)]="entry.fieldOfStudy">
                 <mat-option *ngFor="let field of (fieldsOfStudy |async )?.majors" [value]="field.name">{{ field.name }}</mat-option>
             </mat-select>
         </mat-form-field>
@@ -27,7 +27,7 @@
         <mat-form-field appearance="outline" fxFlex="45">
             <mat-icon matPrefix>event</mat-icon>
             <mat-label>Year Started</mat-label>
-            <mat-select [(ngModel)]="yearStart">
+            <mat-select [(ngModel)]="entry.yearStarted">
                 <mat-option *ngFor="let year of yearRange" [value]="year">{{ year }}</mat-option>
             </mat-select>
         </mat-form-field>
@@ -35,14 +35,14 @@
         <mat-form-field appearance="outline" fxFlex="45">
             <mat-icon matPrefix>event</mat-icon>
             <mat-label>Year Completed</mat-label>
-            <mat-select [(ngModel)]="yearComplete"> 
+            <mat-select [(ngModel)]="yearComplete" [(ngModel)]="entry.yearCompleted"> 
                 <mat-option value="">Present</mat-option>
                 <mat-option *ngFor="let year of yearRange" [value]="year">{{ year }}</mat-option>
             </mat-select>
         </mat-form-field>
     </div>
 
-    <button id="delete-button" mat-mini-fab color="warn">
+    <button id="delete-button" mat-mini-fab color="warn" (click)="removeEntry()" >
         <mat-icon>delete</mat-icon>
     </button>
  </mat-card>   
