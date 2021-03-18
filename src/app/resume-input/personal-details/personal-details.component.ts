@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { DataManagerService } from '../service/data-manager.service';
 
 @Component({
   selector: 'app-personal-details',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataManager: DataManagerService) { }
+
+  set firstName(fN) {
+    if(fN) {
+      this.dataManager.firstName = fN;
+    }
+  }
 
   ngOnInit(): void {
   }

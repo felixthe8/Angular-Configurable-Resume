@@ -13,9 +13,8 @@ export class EducationEntryComponent implements OnInit {
   yearStart: string;
   yearComplete: string;
 
-  fieldsOfStudy: Observable<any> = this.httpClient.get(
-                  '../../../assets/majors.json',
-                  );
+  fieldsOfStudy: Observable<any> = this.httpClient.get('../../../assets/majors.json');
+  degreeTypes: Array<string> = ['High School / GE','Professional Certification', 'Associate', 'Bachelor', 'Master', 'Doctoral']
 
   constructor(private httpClient: HttpClient) { }
 

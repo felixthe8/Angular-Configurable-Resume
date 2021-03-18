@@ -12,6 +12,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule}  from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+
 
 import { ResumeInputComponent } from './resume-input/resume-input.component';
 import { PersonalDetailsComponent } from './resume-input/personal-details/personal-details.component';
@@ -19,6 +21,8 @@ import { EducationComponent } from './resume-input/education/education.component
 import { EducationEntryComponent } from './resume-input/education/education-entry/education-entry.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { IconButtonComponent } from './resume-input/shared/icon-button/icon-button.component';
+import { ReviewComponent } from './resume-input/review/review.component';
 
 const routes: Routes = [
   { path: '',  component: ResumeInputComponent }
@@ -31,7 +35,9 @@ const routes: Routes = [
     ResumeInputComponent,
     PersonalDetailsComponent,
     EducationComponent,
-    EducationEntryComponent
+    EducationEntryComponent,
+    IconButtonComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +52,8 @@ const routes: Routes = [
     MatInputModule,
     MatIconModule,
     MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
