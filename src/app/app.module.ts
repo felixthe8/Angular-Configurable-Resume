@@ -13,7 +13,7 @@ import { MatInputModule}  from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
-
+import { NgxMaskModule, IConfig } from 'ngx-mask';
 
 import { ResumeInputComponent } from './resume-input/resume-input.component';
 import { PersonalDetailsComponent } from './resume-input/personal-details/personal-details.component';
@@ -23,6 +23,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { IconButtonComponent } from './resume-input/shared/icon-button/icon-button.component';
 import { ReviewComponent } from './resume-input/review/review.component';
+
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 const routes: Routes = [
   { path: '',  component: ResumeInputComponent }
@@ -53,7 +55,8 @@ const routes: Routes = [
     MatIconModule,
     MatSelectModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
