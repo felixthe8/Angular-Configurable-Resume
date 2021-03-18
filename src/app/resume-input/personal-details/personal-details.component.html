@@ -11,7 +11,7 @@
                 <mat-form-field appearance="outline" fxFlex="45">
                     <mat-icon matPrefix>account_box</mat-icon>
                     <mat-label>Last Name</mat-label>
-                    <input matInput placeholder="Enter Last Name" required>
+                    <input matInput placeholder="Enter Last Name" required [(ngModel)]="lastName">
                 </mat-form-field>
             </div>
         
@@ -19,19 +19,19 @@
                 <mat-form-field appearance="outline" fxFlex="30">
                     <mat-icon matPrefix>phone</mat-icon>
                     <mat-label>Phone Number</mat-label>
-                    <input matInput placeholder="Enter Phone Number" type="text" required mask="(000) 000-0000">
+                    <input matInput placeholder="Enter Phone Number" type="text" required mask="(000) 000-0000" [(ngModel)]="phoneNumber">
                 </mat-form-field>
         
                 <mat-form-field appearance="outline" fxFlex="30">
                     <mat-icon matPrefix>email</mat-icon>
                     <mat-label>Email</mat-label>
-                    <input matInput placeholder="Enter Email" type="email" required>
+                    <input matInput placeholder="Enter Email" type="email" required [(ngModel)]="email">
                 </mat-form-field>
         
                 <mat-form-field appearance="outline" fxFlex="30">
                     <mat-icon matPrefix>link</mat-icon>
                     <mat-label>LinkedIn</mat-label>
-                    <input matInput placeholder="Enter LinkedIn" type="url">
+                    <input matInput placeholder="Enter LinkedIn" type="url" [(ngModel)]="linkedInURL">
                 </mat-form-field>
             </div>
         </mat-card>
