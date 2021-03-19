@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Education, IconButton } from 'src/app/interfaces/interface';
-import { DataManagerService } from '../service/data-manager.service';
+import { EducationServiceService } from '../service/education-service.service';
 
 @Component({
   selector: 'app-education',
@@ -9,7 +9,7 @@ import { DataManagerService } from '../service/data-manager.service';
 })
 export class EducationComponent implements OnInit {
 
-  constructor(private dataService: DataManagerService) { }
+  constructor(private dataService: EducationServiceService) { }
 
   addButton: IconButton = {
     buttonLabel: 'Add Education',
@@ -17,7 +17,7 @@ export class EducationComponent implements OnInit {
   }
 
   get educationEntries(): Set<Education> {
-    return this.dataService.education;
+    return this.dataService.educationEntries;
   }
 
   ngOnInit(): void {

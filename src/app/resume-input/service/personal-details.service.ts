@@ -13,6 +13,7 @@ export class DataManagerService {
   private _phoneNumber: string;
   private _email: string;
   private _linkedInURL: string;
+  private _summaryOfQualifications: string;
 
   set firstName(fN: string) {
     if(fN) {
@@ -64,16 +65,14 @@ export class DataManagerService {
     return this._linkedInURL;
   }
 
-  ////////////////////////////////////////
-  //  Education Tab data
-  ////////////////////////////////////////
-  private _education: Set<Education> = new Set();
-  set education(edu: Set<Education>) {
-    this._education = edu;
+  set summaryOfQualifications(summary: string) {
+    if(summary) {
+      this._summaryOfQualifications = summary;
+    }
   }
 
-  get education(): Set<Education> {
-    return this._education;
+  get summaryOfQualifications(): string {
+    return this._summaryOfQualifications;
   }
 
   constructor() { }

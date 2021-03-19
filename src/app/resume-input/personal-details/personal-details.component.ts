@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { DataManagerService } from '../service/data-manager.service';
+import { DataManagerService } from '../service/personal-details.service';
 
 @Component({
   selector: 'app-personal-details',

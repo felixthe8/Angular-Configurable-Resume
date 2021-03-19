@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IconButton } from 'src/app/interfaces/interface';
 
 @Component({
   selector: 'app-review',
@@ -8,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class ReviewComponent implements OnInit {
 
   constructor() { }
+
+  generateButton: IconButton = {
+    buttonLabel: 'Generate Resume',
+    icon: 'article'
+  }
 
   ngOnInit(): void {
   }

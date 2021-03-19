@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
-import { DataManagerService } from '../../service/data-manager.service';
 import { Education } from '../../../interfaces/interface';
+import { EducationServiceService } from '../../service/education-service.service';
 
 @Component({
   selector: 'app-education-entry',
@@ -19,7 +19,7 @@ export class EducationEntryComponent implements OnInit {
   fieldsOfStudy: Observable<any> = this.httpClient.get('../../../assets/majors.json');
   degreeTypes: Array<string> = ['High School / GE','Professional Certification', 'Associate', 'Bachelor', 'Master', 'Doctoral']
 
-  constructor(private httpClient: HttpClient, private dataManager: DataManagerService) { }
+  constructor(private httpClient: HttpClient, private dataManager: EducationServiceService) { }
 
   ngOnInit(): void {
     this.yearRange = this.getLast50Years();
@@ -37,7 +37,7 @@ export class EducationEntryComponent implements OnInit {
 
   removeEntry(): void {
     if(this.entry) {
-      this.dataManager.education.delete(this.entry);
+      this.dataManager.educationEntries.delete(this.entry);
     }
   }
 
