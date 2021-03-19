@@ -15,9 +15,10 @@ export interface PersonalDetails {
     firstName: string;
     lastName: string;
     email: string;
-    phone: string;
-    linkedIn?: string
-}
+    phoneNumber: string;
+    summaryOfQualifications: string;
+    linkedInURL?: string;
+  }
 
 export interface Education {
     institution: string;

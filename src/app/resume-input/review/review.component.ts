@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IconButton } from 'src/app/interfaces/interface';
+import { PersonalDetailsService } from '../service/personal-details.service';
+import { PersonalDetails } from '../../interfaces/interface';
 
 @Component({
   selector: 'app-review',
@@ -8,12 +10,26 @@ import { IconButton } from 'src/app/interfaces/interface';
 })
 export class ReviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private personalDetailsSvc: PersonalDetailsService) { }
+
+  get personalDetails(): PersonalDetails {
+    return {
+      firstName: this.personalDetailsSvc.firstName,
+      lastName: this.personalDetailsSvc.lastName,
+      email: this.personalDetailsSvc.email,
+      phoneNumber: this.personalDetailsSvc.phoneNumber,
+      summaryOfQualifications: this.personalDetailsSvc.summaryOfQualifications,
+      linkedInURL: this.personalDetailsSvc.linkedInURL
+    }
+  }
+
 
   generateButton: IconButton = {
     buttonLabel: 'Generate Resume',
     icon: 'article'
   }
+
+
 
   ngOnInit(): void {
   }

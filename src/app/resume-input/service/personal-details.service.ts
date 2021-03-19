@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Education } from 'src/app/interfaces/interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DataManagerService {
+export class PersonalDetailsService {
   ///////////////////////////////////////////
   //   Personal Details Tab data
   //////////////////////////////////////////

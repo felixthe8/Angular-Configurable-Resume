@@ -24,6 +24,8 @@ import { IconButtonComponent } from './resume-input/shared/icon-button/icon-butt
 import { ReviewComponent } from './resume-input/review/review.component';
 import { ResumeViewerComponent } from './resume-viewer/resume-viewer.component';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { PhonePipe } from './shared/phone.pipe';
 
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
@@ -42,7 +44,8 @@ const routes: Routes = [
     EducationEntryComponent,
     IconButtonComponent,
     ReviewComponent,
-    ResumeViewerComponent
+    ResumeViewerComponent,
+    PhonePipe
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,8 @@ const routes: Routes = [
     MatSelectModule,
     HttpClientModule,
     MatButtonModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { DataManagerService } from '../service/personal-details.service';
+import { Component, OnInit } from '@angular/core';
+import { PersonalDetailsService } from '../service/personal-details.service';
 
 @Component({
   selector: 'app-personal-details',
@@ -8,7 +8,7 @@ import { DataManagerService } from '../service/personal-details.service';
 })
 export class PersonalDetailsComponent implements OnInit {
 
-  constructor(private dataManager: DataManagerService) { }
+  constructor(private dataManager: PersonalDetailsService) { }
 
   set firstName(fN: string) {
     if(fN) {
