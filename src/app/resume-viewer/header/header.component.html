@@ -1,14 +1,14 @@
 <div fxLayout="column" fxLayoutAlign="space-around center" >
     <h1> 
-        <span>{{ firstName }}</span>
-        <span id="last-name">{{ lastName }}</span>
+        <span>{{ data.firstName }}</span>
+        <span id="last-name">{{ data.lastName }}</span>
     </h1>
 
-    <mat-list fxLayout="row" fxLayoutAlign="center center">
-        <mat-list-item>{{ phoneNumber }}</mat-list-item>
+    <mat-list fxLayout="row" fxLayoutAlign="space-evenly center">
+        <mat-list-item fxLayoutAlign="space-evenly center">{{ data.phoneNumber | phone:"US" }}</mat-list-item>
         <mat-divider [vertical]="true"></mat-divider>
-        <mat-list-item>{{ email }}</mat-list-item>
+        <mat-list-item fxLayoutAlign="space-evenly center">{{ data.email }}</mat-list-item>
         <mat-divider [vertical]="true"></mat-divider>
-        <mat-list-item><a>{{ linkedin }}</a></mat-list-item>
+        <mat-list-item fxLayoutAlign="space-evenly center"><a [href]="data.linkedInURL">{{ data.linkedInURL |linkedin }}</a></mat-list-item>
     </mat-list>
 </div>

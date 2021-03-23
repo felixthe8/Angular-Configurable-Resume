@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { PersonalDetails } from '../../interfaces/interface';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -10,11 +11,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  firstName = environment.name.firstName;
-  lastName = environment.name.lastName;
-  phoneNumber = environment.contact.phone;
-  email = environment.contact.email;
-  linkedin = environment.contact.linkedin;
+  @Input() data: PersonalDetails;
 
   ngOnInit(): void {
   }

@@ -18,6 +18,10 @@ div {
     mat-list {
         padding-top: 0;
 
+        mat-list-item {
+            font-weight: bold;
+        }
+
         mat-divider {
             height: 20px;
         }

@@ -26,6 +26,7 @@ import { ResumeViewerComponent } from './resume-viewer/resume-viewer.component';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { PhonePipe } from './shared/phone.pipe';
+import { LinkedinPipe } from './resume-viewer/linkedin.pipe';
 
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
@@ -46,7 +47,8 @@ const routes: Routes = [
     IconButtonComponent,
     ReviewComponent,
     ResumeViewerComponent,
-    PhonePipe
+    PhonePipe,
+    LinkedinPipe
   ],
   imports: [
     BrowserModule,
