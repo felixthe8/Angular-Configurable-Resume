@@ -31,7 +31,8 @@ import { PhonePipe } from './shared/phone.pipe';
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 const routes: Routes = [
-  { path: '',  component: ResumeInputComponent }
+  { path: '',  component: ResumeInputComponent },
+  { path: 'view', component: ResumeViewerComponent }
 ];
 
 @NgModule({

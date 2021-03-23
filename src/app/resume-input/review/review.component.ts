@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IconButton } from 'src/app/interfaces/interface';
 import { PersonalDetailsService } from '../service/personal-details.service';
 import { PersonalDetails } from '../../interfaces/interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-review',
@@ -10,7 +11,7 @@ import { PersonalDetails } from '../../interfaces/interface';
 })
 export class ReviewComponent implements OnInit {
 
-  constructor(private personalDetailsSvc: PersonalDetailsService) { }
+  constructor(private personalDetailsSvc: PersonalDetailsService, private router: Router) { }
 
   get personalDetails(): PersonalDetails {
     return {
@@ -29,7 +30,9 @@ export class ReviewComponent implements OnInit {
     icon: 'article'
   }
 
-
+  generateResume(): void {
+    this.router.navigateByUrl("/view", { state: { personal: this.personalDetails } });
+  }
 
   ngOnInit(): void {
   }
